@@ -18,9 +18,7 @@ if uploaded_file is not None:
     st.write("Classifying...")
     
     image = Image.open(uploaded_file)
-    
-    image = np.array(img)
-
+ 
     image = image.resize((70,70))
     image = np.array(image)
     st.write(image.shape)
