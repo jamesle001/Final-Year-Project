@@ -19,7 +19,7 @@ if uploaded_file is not None:
     
     image = Image.open(uploaded_file)
     image.resize((70,70))
-    image = numpy.array(image)
+    image = np.array(image)
     image = image/255.0
     img = image
     pca_reload = pk.load(open("pca.pkl",'rb'))
