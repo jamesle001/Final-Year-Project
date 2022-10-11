@@ -1,8 +1,4 @@
 import streamlit as st
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import  LabelEncoder
-import numpy as np
 
 st.header("Fish Weight Prediction App")
 st.text_input("Enter your Name: ", key="name")
