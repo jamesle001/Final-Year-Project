@@ -18,7 +18,7 @@ if uploaded_file is not None:
     st.write("Classifying...")
     
     image = Image.open(uploaded_file)
-    img = img.save("img.jpg")
+    img = image.save("img.jpg")
 
     img = cv2.imread("img.jpg")
     image = Image.open(uploaded_file)
