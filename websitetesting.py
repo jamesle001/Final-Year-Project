@@ -19,7 +19,8 @@ if uploaded_file is not None:
     
     image = Image.open(uploaded_file)
     image.resize((70,70))
-    image = np.array(image).reshape(1,14700)
+    image = np.array(image).
+    image = image.reshape(1,14700)
     image = image/255.0
     st.write(image.shape)
     img = image
