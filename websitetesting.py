@@ -4,6 +4,7 @@ from sklearn.decomposition import PCA
 import numpy as np
 import cv2
 import pickle as pk
+from PIL import Image 
 
 loaded_model = pk.load(open('final_model.sav', 'rb'))
 def prediction(image_name):
@@ -28,5 +29,5 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
-    label = predicttion(uploaded_file)
+    label = prediction(uploaded_file)
     st.write('%s (%.2f%%)' % (label[1], label[2]*100))
