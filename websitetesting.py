@@ -21,7 +21,7 @@ if uploaded_file is not None:
     img = image.save("img.jpg")
 
     img = cv2.imread("img.jpg")
-    image = Image.open(uploaded_file)
+    image = img
     st.write(np.array(image))
     image = image.resize((70,70))
     image = np.array(image)
