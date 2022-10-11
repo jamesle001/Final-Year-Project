@@ -27,10 +27,12 @@ if uploaded_file is not None:
     img = image
     pca_reload = pk.load(open("pca.pkl",'rb'))
     img_pca=pca_reload.transform(img)
+    st.write(img_pca)
     st.write("Loading PCA...")
     
     y_pred = loaded_model.predict(img_pca)
     st.write("Loading result...")
+    st.write(y_pred)
     
     print("Prediction: {}".format(y_pred))
     st.write("Result out...")
