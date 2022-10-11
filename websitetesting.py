@@ -17,8 +17,8 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying...")
     
-    image = cv2.imread(uploaded_file)
-    st.write(image)
+    image = Image.open(uploaded_file)
+    st.write(np.array(image))
     image = image.resize((70,70))
     image = np.array(image)
     st.write(image.shape)
