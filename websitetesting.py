@@ -22,7 +22,9 @@ if uploaded_file is not None:
     image = np.array(image)
     st.write(image.shape)
     image = image.reshape(1,14700)
+    st.write(image)
     image = image/255.0
+    st.write(image)
     st.write(image.shape)
     img = image
     pca_reload = pk.load(open("pca.pkl",'rb'))
