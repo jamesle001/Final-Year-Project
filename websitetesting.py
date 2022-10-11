@@ -34,7 +34,7 @@ if uploaded_file is not None:
     
     y_pred = loaded_model.predict(img_pca)
     st.write("Loading result...")
-    st.write(y_pred)
+    st.write(y_pred.asarray)
     
     print("Prediction: {}".format(y_pred))
     st.write("Result out...")
