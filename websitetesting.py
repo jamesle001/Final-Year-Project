@@ -12,12 +12,13 @@ st.header("Wavelength Prediction Application")
 
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
+    imagedisplay = Image.open(uploaded_file)
+    st.image(imagedisplay, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
-    ####image = cv2.imread(image)
-    image = image.resize((70,70))
+    image = load_img(uploaded_file,target_size=(70,70))  
+    img = img_to_array(image)
+    img = np.array(image)
     image = image/255.0
     img_list.append(image)
     img = np.asarray(img_list)
