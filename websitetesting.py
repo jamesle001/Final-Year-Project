@@ -34,8 +34,7 @@ if uploaded_file is not None:
     
     y_pred = loaded_model.predict(img_pca)
     st.write("Loading result...")
-    st.write(y_pred[0])
+    st.write("Prediction: ",y_pred[0])
     
-    print("Prediction: ",y_pred[0])
     ###print("Real label:", image_name)
     
