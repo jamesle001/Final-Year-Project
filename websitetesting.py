@@ -16,13 +16,12 @@ if uploaded_file is not None:
     st.image(imagedisplay, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
-    image = load_img(uploaded_file,target_size=(70,70))  
-    img = img_to_array(image)
-    img = np.array(image)
+    
+    image = Image.open(uploaded_file)
+    image.resize((70,70))
+    image = numpy.array(image)
     image = image/255.0
-    img_list.append(image)
-    img = np.asarray(img_list)
-    img = img.reshape(img.shape[0],img.shape[1]*img.shape[1]*img.shape[3])
+    img = image
     pca_reload = pk.load(open("pca.pkl",'rb'))
     img_pca=pca_reload.transform(img)
     y_pred = loaded_model.predict(img_pca)
