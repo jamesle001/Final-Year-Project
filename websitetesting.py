@@ -36,7 +36,6 @@ if uploaded_file is not None:
     st.write("Loading result...")
     st.write(y_pred[0])
     
-    print("Prediction: {}".format(y_pred[0]))
-    st.write("Result out...")
+    print("Prediction: ",y_pred[0])
     ###print("Real label:", image_name)
     
