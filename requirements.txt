@@ -7,3 +7,4 @@ pandas==1.2.3
 joblib==0.16.0
 scikit-learn
 opencv-python-headless==4.5.5.62
+pillow
