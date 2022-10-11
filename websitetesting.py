@@ -27,5 +27,5 @@ if uploaded_file is not None:
     img_pca=pca_reload.transform(img)
     y_pred = loaded_model.predict(img_pca)
     print("Prediction: {}".format(y_pred))
-    print("Real label:", image_name)
+    ###print("Real label:", image_name)
     
