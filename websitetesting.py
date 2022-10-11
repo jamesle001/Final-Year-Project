@@ -21,16 +21,11 @@ if uploaded_file is not None:
  
     image = image.resize((70,70))
     image = np.array(image)
-    st.write(image.shape)
     image = image.reshape(1,14700)
-    st.write(image)
     image = image/255.0
-    st.write(image)
-    st.write(image.shape)
+
     pca_reload = pk.load(open("pca.pkl",'rb'))
     img_pca=pca_reload.transform(image)
-    st.write(img_pca)
-    st.write("Loading PCA...")
     
     y_pred = loaded_model.predict(img_pca)
     st.write("Loading result...")
