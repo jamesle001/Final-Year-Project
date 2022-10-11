@@ -26,9 +26,8 @@ if uploaded_file is not None:
     image = image/255.0
     st.write(image)
     st.write(image.shape)
-    img = image
     pca_reload = pk.load(open("pca.pkl",'rb'))
-    img_pca=pca_reload.transform(img)
+    img_pca=pca_reload.transform(image)
     st.write(img_pca)
     st.write("Loading PCA...")
     
