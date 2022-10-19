@@ -6,7 +6,7 @@ import cv2
 import pickle as pk
 from PIL import Image 
 
-loaded_model = pk.load(open('final_model.sav', 'rb'))
+loaded_model = pk.load(open('model_final.sav', 'rb'))
 
 st.header("Wavelength Prediction Application")
 
@@ -24,7 +24,7 @@ if uploaded_file is not None:
     image = image.reshape(1,14700)
     image = image/255.0
 
-    pca_reload = pk.load(open("pca.pkl",'rb'))
+    pca_reload = pk.load(open("pca_final.pkl",'rb'))
     img_pca=pca_reload.transform(image)
     
     y_pred = loaded_model.predict(img_pca)
