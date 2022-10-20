@@ -10,7 +10,7 @@ loaded_model = pk.load(open('model_final.sav', 'rb'))
 
 st.header("Wavelength Prediction Application")
 
-uploaded_file = st.file_uploader("Choose an image...", type=['jpg', 'png','jpge'])
+uploaded_file = st.file_uploader("Choose an image...", type=['jpg', 'png','jpeg'])
 if uploaded_file is not None:
     imagedisplay = Image.open(uploaded_file)
     st.image(imagedisplay, caption='Uploaded Image.', use_column_width=True)
